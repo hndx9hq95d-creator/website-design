@@ -1,6 +1,48 @@
 /* this is a css coment */
 
+/* css reset */
+* { 
+    margin: 0%;
+    padding: 0%;
+}
+
 /* targets the body tag <body> */
 body {
-    background-color: rgb(75, 161, 237);
+    background-color: rgb(2, 2, 49);
+    font-family:"BBH Sans Bartle" , Arial, Helvetica, sans-serif;
+    line-height: 1.5;/* 1.5 line spacing */
+    color: aliceblue;
+} 
+
+h1 {
+    font-family:"BBH Sans Bartle" , sans-serif;
+    margin-bottom: 0.5em;
+ /* em - scales on the font size */
+ /* /* if the font size is 40 px , 0.5 am is 20 px  */
+
+}
+
+h2 {
+background-color: rgb(48, 106, 142);
+font-family: Georgia, 'Times New Roman', Times, serif;
+margin-bottom: 0.5em;
+line-height: 1.5;
+color: rgb(2, 2, 49);
+}
+
+p{
+    font-family: sans-serif;
+}
+li {
+    font-family: sans-serif;
+}
+
+nav 
+{
+    padding: 1 px 
+
+}
+nav a {
+    color: aliceblue;
+    text-decoration: none;
 }
