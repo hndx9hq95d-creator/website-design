@@ -88,6 +88,14 @@ color: var(--primary-tint);
 .text-dark{ color: var(--dark);}
 .text-muted{  color: var(--muted);}
 
+/********************** Components ******************/
+.product-image img{
+    aspect-ration:16/ 9
+    width: 100%
+}
+
+
+
 /********************** layout ******************/
 .d-flex { 
     display: flex;}
