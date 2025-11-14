@@ -2,14 +2,27 @@
 
 :root{
     --primary: #4b2d1e;
+    --primary-tint: #704e3d;
+    --primary-shade: #372014
+    ;
+
     --light:#ffffff;
     --dark: #362d2a;
-    --muted: #f8f6f5;
+
+    --muted: #e8e6e5;
+    --muted-tint: #f8f6f5;
+    --muted-shade: #d8d6d5;
 
     --font-normal: Roboto, Ariel, sans-serif;
 --font-heading: 'Noto Serif', serif;
-
+--space-0: 0;
+--space-1: 0.5rem;
+--space-2: 1rem;
+--space-3: 2rem;
 }
+
+
+
 /*css reset-targets everything */
 * {
     margin: 0;
@@ -27,6 +40,43 @@ h1, h2, h3, h4, h5, h6 {
 p{
     margin-bottom: 0.5rem;
 }
+
+/********************** Buttons ******************/
+.btn {
+    border:none;
+    border-radius: 1rem;
+    padding: var(--space-1) var(--space-2);
+    cursor: pointer;
+    
+    
+    
+}
+.btn-primary:hover{
+    background-color: var(--primary-tint);
+}
+
+.btn-primary{
+    background-color:var(--primary);
+    color: var(--light);
+}
+.btn-secondary {
+    background-color: var(--muted);
+    color: var(--dark);
+}
+.btn-secondary:hover{
+    background-color: var(--muted-tint);
+}
+
+.btn-secondary:active{
+    background-color: var(--muted-shade);
+}
+link{
+    color: var(--primary);
+    text-decoration: underline;
+}
+link:hover {
+color: var(--primary-tint);
+}
 /********************** COLOUR ******************/
 .bg-primary{background-color: var(--primary);}
 .bg-light{background-color: var(--light);}
@@ -38,10 +88,40 @@ p{
 .text-dark{ color: var(--dark);}
 .text-muted{  color: var(--muted);}
 
+/********************** layout ******************/
+.d-flex { 
+    display: flex;}
+    .flex-between { justify-content: space-between;}
+    .d-grid { display: grid;}
+
+    .grid-3col {
+        grid-template-columns:repeat(3,1fr);
+        
+    }
+
+    .grid-2col {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/********************** Spacing ******************/
+.p-0 { padding: var(--space-0);}
+.p-1 { padding: var(--space-1);}
+.p-2 { padding: var(--space-2);}
+.p-3 { padding: var(--space-3);}
+
+.m-0 { padding: var(--space-0);}
+.m-1 { padding: var(--space-1);}
+.m-2 { padding: var(--space-2);}
+.m-3 { padding: var(--space-3);}
+
+.gap-0 { gap: var(--space-0);}
+.gap-1 { gap: var(--space-1);}
+.gap-2 { gap: var(--space-2);}
+.gap-3 { gap: var(--space-3);}
+
 /********************** SWATCHES ******************/
 .swatches {
     display: flex;
-    gap: 1rem;
 }
 .swatch .swatch-value {
     border-radius: 100%;
