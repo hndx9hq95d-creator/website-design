@@ -1,145 +1,220 @@
-@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Jost:ital,wght@0,100..900;1,100..900&family=Momo+Trust+Display&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
+/* CSS Variables */
+:root {
     --primary: #4b2d1e;
-    --primary-tint: #704e3d;
-    --primary-shade: #372014
-    ;
+    --primary-tint: #734f3d;
+    --primary-shade: #30190d;
 
-    --light:#ffffff;
     --dark: #362d2a;
+    --light: #ffffff;
 
     --muted: #e8e6e5;
     --muted-tint: #f8f6f5;
     --muted-shade: #d8d6d5;
 
-    --font-normal: Roboto, Ariel, sans-serif;
---font-heading: 'Noto Serif', serif;
---space-0: 0;
---space-1: 0.5rem;
---space-2: 1rem;
---space-3: 2rem;
+    --shadow-dark: 0 0.1rem 0.2rem 0.1rem rgba(45, 40, 35, 0.2);
+    --shadow-light: 0 0.1rem 0.2rem 0.1rem rgba(255, 255, 255, 0.5);
+
+    --font-normal: Roboto, Arial, sans-serif;
+    --font-heading: 'Noto Serif', serif;
+
+    --space-0: 0;
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 2rem;
 }
 
-
-
-/*css reset-targets everything */
+/* CSS Reset - Targets Everything */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
-    line-height: 1.5;
+body {
     font-family: var(--font-normal);
+    line-height: 1.5;
 }
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading) ;
-    margin-bottom: 0.5rem;
-}
-p{
+    font-family: var(--font-heading);
     margin-bottom: 0.5rem;
 }
 
-/********************** Buttons ******************/
-.btn {
-    border:none;
-    border-radius: 1rem;
-    padding: var(--space-1) var(--space-2);
-    cursor: pointer;
-    
-    
-    
+p {
+    margin-bottom: 0.5rem;
 }
-.btn-primary:hover{
+
+/************************* BUTTONS *************************/
+.btn {
+    border: none;
+    border-radius: 1rem;
+
+    padding: var(--space-1) var(--space-2);
+
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--light)
+}
+.btn-primary:hover {
     background-color: var(--primary-tint);
 }
-
-.btn-primary{
-    background-color:var(--primary);
-    color: var(--light);
+.btn-primary:active {
+    background-color: var(--primary-shade);
 }
+
 .btn-secondary {
     background-color: var(--muted);
     color: var(--dark);
 }
-.btn-secondary:hover{
+.btn-secondary:hover {
     background-color: var(--muted-tint);
 }
-
-.btn-secondary:active{
+.btn-secondary:active {
     background-color: var(--muted-shade);
 }
-link{
+
+.link {
     color: var(--primary);
     text-decoration: underline;
 }
-link:hover {
-color: var(--primary-tint);
-}
-/********************** COLOUR ******************/
-.bg-primary{background-color: var(--primary);}
-.bg-light{background-color: var(--light);}
-.bg-dark{background-color: var(--dark);}
-.bg-muted{ background-color: var(--muted);}
-
-.text-primary{ color: var(--primary);}
-.text-light{ color: var(--light);}
-.text-dark{ color: var(--dark);}
-.text-muted{  color: var(--muted);}
-
-/********************** Components ******************/
-.product-image img{
-    aspect-ration:16/ 9
-    width: 100%
+.link:hover {
+    color: var(--primary-tint);
 }
 
+/************************* COLOR *************************/
+.bg-primary { background-color: var(--primary); }
+.bg-dark { background-color: var(--dark); }
+.bg-light { background-color: var(--light); }
+.bg-muted { background-color: var(--muted); }
 
+.text-primary { color: var(--primary); }
+.text-dark { color: var(--dark); }
+.text-light { color: var(--light); }
+.text-muted { color: var(--muted); }
 
-/********************** layout ******************/
-.d-flex { 
-    display: flex;}
-    .flex-between { justify-content: space-between;}
-    .d-grid { display: grid;}
+/************************* COMPONENTS *************************/
+.product-image {
+    position: relative;
+    /* tells all children that this is the parent */
+}
+.product-image img {
+    aspect-ratio: 16 / 9;
+    width: 100%;
 
-    .grid-3col {
-        grid-template-columns:repeat(3,1fr);
-        
-    }
+    object-fit: cover;
 
-    .grid-2col {
-    grid-template-columns: repeat(2, 1fr);
+    border: 4px solid var(--light);
+    border-radius: var(--space-2);
+}
+.product-image .product-tag {
+    background-color: var(--dark);
+    color: var(--light);
+    box-shadow: var(--shadow-light);
+
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--space-3);
+
+    position: absolute;
+    left: var(--space-2);
+    top: var(--space-2);
 }
 
-/********************** Spacing ******************/
-.p-0 { padding: var(--space-0);}
-.p-1 { padding: var(--space-1);}
-.p-2 { padding: var(--space-2);}
-.p-3 { padding: var(--space-3);}
+.tags {
+    display: flex;
+    list-style: none;
+    gap: var(--space-1)
+}
+.tags .tag-item {
+    background-color: var(--primary);
+    color: var(--light);
 
-.m-0 { padding: var(--space-0);}
-.m-1 { padding: var(--space-1);}
-.m-2 { padding: var(--space-2);}
-.m-3 { padding: var(--space-3);}
+    text-decoration: none;
 
-.gap-0 { gap: var(--space-0);}
-.gap-1 { gap: var(--space-1);}
-.gap-2 { gap: var(--space-2);}
-.gap-3 { gap: var(--space-3);}
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--space-3);
+}
 
-/********************** SWATCHES ******************/
+/************************* LAYOUT *************************/
+.container {
+    max-width: 1280px;
+    margin: var(--space-2) auto;
+}
+.container section {
+    box-shadow: var(--shadow-dark);
+
+    padding: var(--space-2);
+    margin-top: var(--space-2);
+}
+
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+
+.flex-between { justify-content: space-between; }
+
+.grid-3col { grid-template-columns: repeat(3, 1fr); }
+.grid-2col { grid-template-columns: repeat(2, 1fr); }
+
+/************************* SPACING *************************/
+.p-0 { padding: var(--space-0); }
+.p-1 { padding: var(--space-1); }
+.p-2 { padding: var(--space-2); }
+.p-3 { padding: var(--space-3); }
+
+.m-0 { margin: var(--space-0); }
+.m-1 { margin: var(--space-1); }
+.m-2 { margin: var(--space-2); }
+.m-3 { margin: var(--space-3); }
+
+.gap-0 { gap: var(--space-0); }
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+
+/************************* SWATCHES *************************/
 .swatches {
     display: flex;
 }
+
 .swatch .swatch-value {
     border-radius: 100%;
     aspect-ratio: 1 / 1;
-    width: 3rem;    /* root font size:16px*/
+    width: 3rem; /* Root font size: 16px */
 
-    box-shadow: 0 0.1rem 0.2rem 0.1rem rgba(45, 40, 35, 0.2);}
-
-
+    box-shadow: var(--shadow-dark);
+}
 
 .swatch .swatch-name {
     text-align: center;
+}
+
+/************************* TEXT *************************/
+.line-1{ 
+
+    display: -webkit-box;
+    -webkit-box-orient: 1;
+    -webkit-line-clamp: 2;
+    line-clamp:1 ;
+
+height: 1.5em;
+overflow: clip;
+text-overflow: ellipsis;
+
+}
+
+.line-2{ 
+
+    display: -webkit-box;
+    -webkit-box-orient: 2;
+    -webkit-line-clamp: 2;
+    line-clamp:2 ;
+
+height: 3em;
+overflow: clip;
+text-overflow: ellipsis;
+
 }

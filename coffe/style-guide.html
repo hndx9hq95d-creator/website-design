@@ -2,108 +2,134 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="style.css">
-    <title>coffee shop style guide</title>
+    
+    <title>Coffee Shop Style Guide</title>
 </head>
 <body>
-    <!-- website content-->
-    <main>
-        <h1>coffee shop style guide</h1>
-        <p>design tokens and reusable styles for the website.</p>
+    
+    <!-- Unique Website Content -->
+    <main class="container">
+        <h1>Coffee Shop Style Guide</h1>
+        <p>Design tokens and reusable styles for the website.</p>
+        
         <section>
-            <h2>colour palette</h2>
+            <h2>Color Palette</h2>
+            
             <article class="swatches gap-3">
-                <!-- colour swatch -->
+                
+                <!-- Color Swatch -->
                 <div class="swatch">
                     <div class="swatch-value bg-primary"></div>
-                    <p class="swatch-name">primary</p>
+                    <p class="swatch-name">Primary</p>
                 </div>
-                <!-- colour swatch -->
+                
+                <!-- Color Swatch -->
                 <div class="swatch">
                     <div class="swatch-value bg-light"></div>
-                    <p class="swatch-name">light</p>
+                    <p class="swatch-name">Light</p>
                 </div>
-                <!-- colour swatch -->
+                
+                <!-- Color Swatch -->
                 <div class="swatch">
                     <div class="swatch-value bg-dark"></div>
-                    <p class="swatch-name">dark</p>
+                    <p class="swatch-name">Dark</p>
                 </div>
-                <!-- colour swatch -->
+                
+                <!-- Color Swatch -->
                 <div class="swatch">
                     <div class="swatch-value bg-muted"></div>
-                    <p class="swatch-name">muted</p>
+                    <p class="swatch-name">Muted</p>
                 </div>
+                
             </article>
         </section>
+        
         <section>
-            <h2>typography</h2>
+            <h2>Typography</h2>
             
-            <h1 class="heading-xl"> heading XL - coffe shop</h1>
-            <h2 class="heading-lg"> heading LG - Freshly Brewed</h2>
-            <p> body text - Used for general descriptions</p>
-            <p class="bg-primary text-muted">muted text - used for secondary details</p>
+            <h1 class="heading-xl">Heading XL - Coffee Shop</h1>
+            <h2 class="heading-lg">Heading LG - Freshly Brewed</h2>
+            <p>Body Text - Used for general descriptions</p>
+            <p class="bg-primary text-muted">Muted text - used for secondary details</p>
+
+            <p class="line-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tenetur possimus. Asperiores assumenda perferendis sapiente, facilis id quasi reprehenderit dolorum obcaecati esse distinctio atque cumque aliquid sequi quis qui rem accusamus magnam quae molestias eius? Dolores soluta itaque voluptas architecto at quasi odit. Odio doloremque sed porro non quibusdam amet? Eveniet optio a odio tempora corporis placeat labore quas inventore quasi officiis! Eos, sunt? Sed, placeat! Sequi quasi veritatis, esse dolorem at neque sint magni possimus cupiditate, rem deleniti laudantium odio corrupti dolore delectus illo fugiat distinctio nostrum? Deserunt recusandae amet laboriosam sed repellendus nam asperiores illo doloremque eum eaque!
+              <p class="line-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi rem suscipit molestiae officiis voluptates odio asperiores iure repellendus eos ullam, repellat vitae animi, quia obcaecati eligendi. At, repellat? Quaerat, reprehenderit temporibus. Perferendis, alias? Veniam reiciendis perferendis qui delectus deserunt repudiandae porro labore amet, eos ipsum sed praesentium molestias repellendus rem eum aut. Rem, nisi enim? Quasi culpa minus voluptate, quisquam quo doloremque consectetur. Fugiat excepturi earum, suscipit dolore cupiditate aliquid ipsum, voluptatem aliquam laudantium provident corrupti quo, repellendus alias animi porro cum laboriosam autem eveniet velit temporibus quae! Repellat eos vel libero eligendi, facilis beatae quam similique eveniet iure provident.</p>
+            </p>
         </section>
+
         <section>
-            <h2>spacing and sizing</h2>
-            
-            <div class="p-0 bg-muted">
-                p-0 - No Padding
+            <h2>Spacing and Sizing</h2>
+
+            <div class="p-0 bg-muted m-1">
+                .p-0 - No Padding
             </div>
 
-            <div class="p-1 gb-muted">
-                .p-1 Small Padding
+            <div class="p-1 bg-muted m-1">
+                .p-1 - Small Padding
             </div>
-            <div class="p-2 gb-muted">
+
+            <div class="p-2 bg-muted m-1">
                 .p-2 - Full Padding
             </div>
-            <div class="p-3 gb-muted">
+
+            <div class="p-3 bg-muted m-1">
                 .p-3 - Large Padding
             </div>
-
         </section>
-        <section>
-            <h2>Layout and utilities</h2>
 
-            <p>flex:</p>
+        <section>
+            <h2>Layout Utilities</h2>
+
+            <p>Flex:</p>
             <div class="d-flex flex-between">
-                <strong>label</strong>
-                <span>value</span>
+                <strong>Label</strong>
+                <span>Value</span>
             </div>
 
-            <p>grids;</p>
-            <div class="d-grid grid-3col gap-2">
-                <div class="bg-muted">col 1</div>
-                <div class="bg-muted">col 2</div>
-                <div class="bg-muted">col 3</div>
+            <p>Grids:</p>
+            <div class="d-grid grid-3col gap-2 m-2">
+                <div class="bg-muted">Col 1</div>
+                <div class="bg-muted">Col 2</div>
+                <div class="bg-muted">Col 3</div>
             </div>
 
-            <p>2 column grid:</p>
-<div class="d-grid grid-2col gap-2">
-    <div class="bg-muted">col 1</div>
-    <div class="bg-muted">col 2</div>
-</div>
+            <div class="d-grid grid-2col gap-2 m-2">
+                <div class="bg-muted">Col 1</div>
+                <div class="bg-muted">Col 2</div>
+            </div>
         </section>
 
         <section>
+            <h2>Buttons and Links</h2>
 
-            <h2>buttons and Links</h2>
-
-            <button class="btn btn-primary">primary button</button>
-            <button class="btn btn-secondary">secondary secondary</button>
-            <a href="@normal" class="link">noemal link</a>
+            <button class="btn btn-primary">Primary Button</button>
+            <button class="btn btn-secondary">Secondary Button</button>
+            <a href="#" class="link">Normal Link</a>
         </section>
 
         <section>
             <h2>Components</h2>
+
             <figure class="product-image">
-                <img src="assets/hotcofee.jpg" alt="">
+                <img src="assets/coffee-cup.jpg" alt="">
+                <figcaption class="product-tag">50% off - &euro;2.50</figcaption>
             </figure>
-            <figcaption class="product-tag">50% off-&euro;2.50</figcaption>
+
+            <p>Tag Styles:</p>
+            <ul class="tags m-1">
+                <li class="tag-item">Tag 1</li>
+                <li class="tag-item">Tag 2</li>
+            </ul>
+
+            <div class="tags m-1">
+                <a href="#" class="tag-item">Tag 1</a>
+                <a href="#" class="tag-item">Tag 2</a>
+            </div>
         </section>
-        
-
-
     </main>
+    
 </body>
-</html> 
+</html>
